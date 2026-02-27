@@ -1,6 +1,10 @@
 node('agent') {
 
     try {
+        stage('Checkout') {
+            checkout scm
+        }
+
 
         stage('Build') {
             sh '''
